@@ -92,3 +92,18 @@ void GameConfigData::read(al::ByamlIter const &iter)
     al::tryGetByamlS32(&this->mPadRumbleLevel, newIter, "PadRumbleLevel");
     al::tryGetByamlBool(&this->mIsEnableBalloonNotice, newIter, "BalloonNotice");
 }
+
+void GameConfigData::write(al::ByamlWriter *writer)
+{
+    writer->pushHash("GameConfigData");
+    writer->addInt("CameraStickSensitivityLevel", this->mCameraStickSensitivityLevel);
+    writer->addBool("IsCameraReverseInputH", this->mIsCameraReverseH);
+    writer->addBool("IsCameraReverseInputV", this->mIsCameraReverseV);
+    writer->addBool("IsValidCameraGyro", this->mIsValidCameraGyro);
+    writer->addInt("CameraGyroSensitivityLevel", this->mCameraGyroSensitivity);
+    writer->addBool("IsUseOpenListAdditionalButton", this->mIsOpenListAdditionalButton);
+    writer->addBool("IsPadRumble", this->mIsPadRumble);
+    writer->addInt("PadRumbleLevel", this->mPadRumbleLevel);
+    writer->addBool("BalloonNotice", this->mIsEnableBalloonNotice);
+    writer->pop();
+}
