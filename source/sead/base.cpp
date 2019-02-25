@@ -7,7 +7,7 @@
 
 namespace sead
 {
-    void Base64::encode(char* out, void const *inBytes, u64 length, bool useOtherSeed)
+    void Base64::encode(char* out, void const *inBytes, u64 length, bool webSafe)
     {
         const char* seed;
         u64 v5, v6;
@@ -17,7 +17,7 @@ namespace sead
 
         seed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
-        if (useOtherSeed)
+        if (webSafe)
         {
             seed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
         }
