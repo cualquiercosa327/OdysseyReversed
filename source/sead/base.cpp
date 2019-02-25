@@ -7,7 +7,7 @@
 
 namespace sead
 {
-    void Base64::encode(char* out, void const *inBytes, u64 length, bool webSafe)
+    void Base64::encode(char* out, void const *inBytes, u64 length, bool urlSafe)
     {
         const char* seed;
         u64 v5, v6;
