@@ -22,6 +22,6 @@ namespace al
         virtual sead::SingleScreenMethodTreeMgr* createMethodTreeMgr_(sead::Heap *);
         virtual f32 calcFps();
 
-        void initAgl(sead::Heap *, s32 displayWidth, s32 displayHeight, s32, s32, s32, s32);
+        void initAgl(sead::Heap *, s32 displayWidth, s32 displayHeight, s32 dockedRenderWidth, s32 dockedRenderHeight, s32 portableRenderWidth, s32 portableRenderHeight);
     };
 };
