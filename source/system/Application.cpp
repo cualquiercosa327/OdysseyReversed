@@ -105,7 +105,7 @@ void Application::init(s32 argc, char** argv)
 
     this->_28->initializeGraphicsSystem(curHeapMgrPtr, bounds);
     curHeapMgrPtr = sead::HeapMgr::sInstancePtr->getCurrentHeap();
-    this->_28->initAgl(curHeapMgrPtr, virtualDisplayWidth, virtualDisplayHeight, 0x640, 0x384, 0x500, 0x2D0);
+    this->_28->initAgl(curHeapMgrPtr, virtualDisplayWidth, virtualDisplayHeight, 1600, 900, 1280, 720);
 
     this->_28->requestChangeUseGPU(false);
 
