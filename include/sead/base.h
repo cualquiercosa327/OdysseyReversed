@@ -12,7 +12,7 @@ namespace sead
     class Base64
     {
     public:
-        static void encode(char *dest, void const *srcBytes, u64 length, bool useDiffSet);
+        static void encode(char *dest, void const *srcBytes, u64 length, bool webSafe);
         static u32 decode(void *, u64, char const *, u64, u64 *);
     };
 };
